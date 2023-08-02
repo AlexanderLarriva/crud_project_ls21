@@ -1,4 +1,5 @@
-from app import app
+from crud_project_ls21.app import app
+
 
 def test_cart():
     with app.test_client() as client:
