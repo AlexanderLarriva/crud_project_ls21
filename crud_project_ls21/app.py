@@ -14,9 +14,7 @@ def index():
 def add_to_cart():
     item_id = request.form.get('item_id')
     item_name = request.form.get('item_name')
-
     cart = json.loads(request.cookies.get('cart', json.dumps({})))
-
     if item_id in cart:
         cart[item_id]['count'] += 1
     else:
